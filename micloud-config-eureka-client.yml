@@ -15,8 +15,10 @@ eureka:
     hostname: eureka7001.com 
   client:
     #server-url:
-    register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
-    fetch-registry: false           #不通过eureka获取注册信息
+    #register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
+    registerWithEureka: false
+    #fetch-registry: false           #不通过eureka获取注册信息
+    fetchRegistry: false
     serviceUrl: 
       defaultZone: http://eureka.7001.com:7001/eureka/
       #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
@@ -33,8 +35,10 @@ eureka:
     hostname: eureka7001.com 
   client:
     #server-url:
-    register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
-    fetch-registry: false           #不通过eureka获取注册信息
+    #register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
+    registerWithEureka: false
+    #fetch-registry: false           #不通过eureka获取注册信息
+    fetchRegistry: false
     serviceUrl: 
       defaultZone: http://eureka.7001.com:7001/eureka/
       #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
