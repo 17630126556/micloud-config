@@ -11,7 +11,8 @@ spring:
     name: micloud-config-client
 eureka:
   client:
-    server-url:
+    #server-url:
+    serviceUrl: 
       defaultZone: http://eureka.7001.com:7001/eureka/
       #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
 ---
@@ -23,7 +24,8 @@ spring:
     name: micloud-config-client
 eureka:
   client:
-    server-url:
+    #server-url:
+    serviceUrl: 
       defaultZone: http://eureka.7001.com:7001/eureka/
       #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
 # 请保存为UTF-8格式
