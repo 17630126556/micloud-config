@@ -11,7 +11,8 @@ spring:
   application:
     name: micloud-config-eureka-client
 eureka:
-  instance: eureka7001.com 
+  instance: 
+    hostname: eureka7001.com 
   client:
     #server-url:
     register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
@@ -28,7 +29,8 @@ spring:
   application:
     name: micloud-config-eureka-client
 eureka:
-  instance: eureka7001.com 
+  instance: 
+    hostname: eureka7001.com 
   client:
     #server-url:
     register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
