@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: micloud-config-provide-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      max-total: 5
+      initial-size: 5
+      max-wait-millis: 200
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.wxy.entity
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath:mybatis/mapper/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+eureka:
+  client:
+    #service-url:
+    serviceUrl: 
+      defaultZone: http://localhost:7001/eureka/
+#      defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+  instance:
+    instance-id: provide-8001.com   #自定义服务名称信息
+    prefer-ip-address: true   #访问路径可以显示IP地址
+info:
+  app.name: micloud
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+# 请保存为UTF-8格式

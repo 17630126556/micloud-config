@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 7001    #注册中心占用7001端口，冒号后面必须要有空格
+  
+spring:
+  profiles: dev         #开发环境
+  application:
+    name: micloud-config-eureka-client
+eureka:
+  instance: eureka7001.com 
+  client:
+    #server-url:
+    register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
+    fetch-registry: false           #不通过eureka获取注册信息
+    serviceUrl: 
+      defaultZone: http://eureka.7001.com:7001/eureka/
+      #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+---
+server:
+  port: 7001    #注册中心占用7001端口，冒号后面必须要有空格
+  
+spring:
+  profiles: test         #开发环境
+  application:
+    name: micloud-config-eureka-client
+eureka:
+  instance: eureka7001.com 
+  client:
+    #server-url:
+    register-with-eureka: false     #当前的eureka-server自己不注册进服务列表中
+    fetch-registry: false           #不通过eureka获取注册信息
+    serviceUrl: 
+      defaultZone: http://eureka.7001.com:7001/eureka/
+      #defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+# 请保存为UTF-8格式
