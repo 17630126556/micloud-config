@@ -50,7 +50,7 @@ info:
 server:
   port: 8001
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: micloud-config-provide-client
   datasource:
