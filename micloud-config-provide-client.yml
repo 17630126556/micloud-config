@@ -55,20 +55,20 @@ spring:
     name: micloud-config-provide-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.jdbc.Driver
-    #driver-class-name: com.mysql.jdbc.Driver
+    #driverClassName: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
     password: root
     dbcp2:
-      minIdle: 5
-      maxTotal: 5
-      initialSize: 5
-      maxWait-millis: 200
-      #min-idle: 5
-      #max-total: 5
-      #initial-size: 5
-      #max-wait-millis: 200
+      #minIdle: 5
+      #maxTotal: 5
+      #initialSize: 5
+      #maxWait-millis: 200
+      min-idle: 5
+      max-total: 5
+      initial-size: 5
+      max-wait-millis: 200
 mybatis:
   # 搜索指定包别名
   typeAliasesPackage: com.wxy.entity
